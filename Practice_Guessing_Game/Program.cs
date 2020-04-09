@@ -6,7 +6,17 @@ namespace Practice_Guessing_Game
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            string secretWord = "hello";
+            string guess = "";
+
+            while (guess != secretWord)
+            {
+                Console.Write("Enter a guess.");
+                guess = Console.ReadLine();
+            }
+            Console.Write("You Win!");
+
+            Console.ReadLine();
         }
     }
 }
