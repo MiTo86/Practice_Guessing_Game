@@ -8,14 +8,39 @@ namespace Practice_Guessing_Game
         {
             string secretWord = "hello";
             string guess = "";
+            int guessCount = 0;
+            int guessLimit = 3;
+            bool outOfGuesses = false;
 
-            while (guess != secretWord)
+            Console.WriteLine("Welcome to the Guessing Game. You have 3 guesses.");
+            Console.WriteLine("The hint is: A word used in greeting.");
+
+            while (guess != secretWord  && !outOfGuesses)
             {
-                Console.Write("Enter a guess.");
-                guess = Console.ReadLine();
-            }
-            Console.Write("You Win!");
 
+
+                if (guessCount < guessLimit)
+                {
+                    {
+                        Console.Write("Enter a guess. ");
+                        guess = Console.ReadLine();
+                        guessCount++;
+                    }
+                }
+                else
+                {
+                    outOfGuesses = true;
+                }
+            }
+            if (outOfGuesses)
+            {
+                Console.Write("You Lose.");
+            }
+            else
+            {
+                Console.Write("You Win!");
+            }
+                        
             Console.ReadLine();
         }
     }
