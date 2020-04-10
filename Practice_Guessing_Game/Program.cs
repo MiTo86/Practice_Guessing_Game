@@ -22,7 +22,7 @@ namespace Practice_Guessing_Game
                 if (guessCount < guessLimit)
                 {
                     {
-                        Console.Write("Enter a guess. ");
+                        Console.Write("Enter a guess: ");
                         guess = Console.ReadLine();
                         guessCount++;
                     }
